@@ -26,7 +26,7 @@ function http(url, method, successHandlre, errorHandler) {
 	if(data) {
 	   successHandlre(data);
 	} else {
-	   errorHandler(error);
+	   errorHandler('No Data');
 	}
 	}, 1000);
 }
@@ -40,3 +40,30 @@ http('http://google.com/', 'GET',
 	  });
 	  
 //  ###################### Without Promises Arrow Function #####################
+
+
+//  ###################### With Promises ##################
+
+function http(url, method) {
+	var promise = new Promise(function(resolve, reject){
+		setTimeout(() => {
+		var data;
+		if(data) {
+		   resolve(data);
+		} else {
+		   reject('No Data');
+		}
+		}, 1000);
+	});
+	
+	return promise;
+}
+
+http('http://google.com/', 'GET') 
+    .then(function(data) {
+      console.log(data);
+	  })
+	.catch(function (err) {
+	  console.log(err)
+	  });
+//  ###################### With Promises End ##################

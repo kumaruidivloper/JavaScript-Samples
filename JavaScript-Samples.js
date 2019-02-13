@@ -201,3 +201,155 @@ console.log(g);  //outPut: Male
 
 
 //  ###################### De-structuring Objects End ##################
+
+
+
+
+//  ###################### JavaScript class Inheritance ##################
+https://youtu.be/DTis5P-1m4c
+
+// Example 1
+
+class Person{
+	  constructor() {
+		   console.log("Person constructor");
+	  }
+}
+
+class Employee extends Person{
+	// even  though derived class there is no constructor outPut is  
+}
+
+let e = new Employee();  //Output: Person constructor
+
+
+
+// Example 2
+
+class Person{
+	  constructor(name) {
+		   console.log(name + "Person constructor");
+	  }
+}
+
+class Employee extends Person{
+	// even  though derived class there is no constructor outPut is  
+}
+
+let e = new Employee("Kumar");  //Output: Kumar Person constructor
+
+
+
+// Example 3
+
+class Person{
+	  constructor(name) {
+		   console.log(name + "Person constructor");
+	  }
+}
+
+class Employee extends Person{
+	 constructor(name) {
+		 super(name);   // Bcoz parent class needs to be called b4 sub class constructor
+		 // Super key call constructor from the parent class
+		   console.log(name + "Employee constructor");
+	  }
+}
+
+let e = new Employee("Kumar");  //Output: Kumar Person constructor
+								//Output: Kumar Employee constructor
+								
+
+								
+// Example 4
+
+class Person{
+	  constructor(name) {
+		   console.log(name + "Person constructor");
+	  }
+	  getID() {
+		  return 10;
+	  }
+	  
+}
+
+class Employee extends Person{
+	 constructor(name) {
+		 super(name);   // Bcoz parent class needs to be called b4 sub class constructor
+		 // Super key call constructor from the parent class
+		   console.log(name + "Employee constructor");
+	  }
+}
+
+let e = new Employee("Kumar");
+console.log(e,getID());
+
+//Output: Kumar Person constructor
+//Output: Kumar Employee constructor
+//Output: 10 
+
+
+// Example 5
+
+class Person{
+	  constructor(name) {
+		   console.log(name + "Person constructor");
+	  }
+	  getID() {
+		  return 10;
+	  }
+	  
+}
+
+class Employee extends Person{
+	 constructor(name) {
+		 super(name);   // Bcoz parent class needs to be called b4 sub class constructor
+		 // Super key call constructor from the parent class
+		   console.log(name + "Employee constructor");
+	  }
+	  
+	  getID() {
+		  return 50;
+	  }
+}
+
+let e = new Employee("Kumar");
+console.log(e,getID());
+
+//Output: Kumar Person constructor
+//Output: Kumar Employee constructor
+//Output: 50
+
+
+// Example 6
+
+class Person{
+	  constructor(name) {
+		   console.log(name + "Person constructor");
+	  }
+	  getID() {
+		  return 10;
+	  }
+	  
+}
+
+class Employee extends Person{
+	 constructor(name) {
+		 super(name);   // Bcoz parent class needs to be called b4 sub class constructor
+		 // Super key call constructor from the parent class
+		   console.log(name + "Employee constructor");
+	  }
+	  
+	  getID() {
+		  return super.getID();  // this super(keyword) now can access parent class getID method
+	  }
+}
+
+let e = new Employee("Kumar");
+console.log(e,getID());
+
+//Output: Kumar Person constructor
+//Output: Kumar Employee constructor
+//Output: 10
+
+//  ###################### JavaScript class Inheritance End ##################

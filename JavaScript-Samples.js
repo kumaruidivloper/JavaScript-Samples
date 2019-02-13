@@ -1,4 +1,5 @@
 //  ########################################################## 1)Promises #############################################################
+// https://www.youtube.com/watch?v=swdWUWtGxR4
 
 //  ###################### Without Promises #####################
 function http (url, method, successCallback, errorHandler) {
@@ -70,6 +71,7 @@ http('http://google.com/', 'GET')
 
 
 //  ###################### Generators Function ##################
+// https://youtu.be/8n8ASL1pPt0
 
 function *createGenerator(){
 	yield 1;

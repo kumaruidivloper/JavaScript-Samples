@@ -67,3 +67,32 @@ http('http://google.com/', 'GET')
 	  console.log(err)
 	  });
 //  ###################### With Promises End ##################
+
+
+//  ###################### Generators Function ##################
+
+function *createGenerator(){
+	yield 1;
+	console.log("After 1st yield");
+	yield 2;
+}
+
+let myGen = createGenerator();
+
+console.log(myGen.next()); // outPut [1]
+
+// outPut[1]
+// object {value:1, done: false}
+
+console.log(myGen.next()); // outPut [2]
+
+// outPut[2]
+// After 1st yield
+// object {value:2, done: false}
+
+console.log(myGen.next()); // outPut [3]
+
+// outPut[3]
+// object {value:undefined, done: true}
+
+//  ###################### Generators Function End ##################

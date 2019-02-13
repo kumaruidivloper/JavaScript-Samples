@@ -164,3 +164,40 @@ console.log(lName);	  //outPut: Shan
 console.log(Gender);  //outPut: Female
 
 //  ###################### De-structuring Array End  ##################
+
+
+
+//  ###################### De-structuring Objects ##################
+https://youtu.be/kgMglU8gZAo
+
+// Example 1 
+
+let employee = {
+	fname: "Kumar",
+	lName: "Shan",
+	Gender: "Male"
+}
+
+let {fName, lName, Gender} = employee;
+
+console.log(fName);   //outPut: Kumar
+console.log(lName);	  //outPut: Shan
+console.log(Gender);  //outPut: Male
+
+
+// Example 2 
+
+let employee = {
+	fname: "Kumar",
+	lName: "Shan",
+	Gender: "Male"
+}
+
+let {fName: f, lName: l, Gender: g} = employee;
+
+console.log(f);   //outPut: Kumar
+console.log(l);	  //outPut: Shan
+console.log(g);  //outPut: Male
+
+
+//  ###################### De-structuring Objects End ##################

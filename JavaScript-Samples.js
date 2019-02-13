@@ -98,3 +98,69 @@ console.log(myGen.next()); // outPut [3]
 // object {value:undefined, done: true}
 
 //  ###################### Generators Function End ##################
+
+
+
+//  ###################### De-structuring Array  ##################
+https://youtu.be/ol5sgcMvONU
+
+// Example 1
+
+let employee = ["Kumar", "Shan", "Male"];
+
+let [fName, lName, Gender] = employee;
+
+console.log(fName);   //outPut: Kumar
+console.log(lName);	  //outPut: Shan
+console.log(Gender);  //outPut: Male
+
+
+// Example 2
+let employee = ["Kumar", "Shan"];
+
+let [fName, lName, Gender] = employee;
+
+console.log(fName);   //outPut: Kumar
+console.log(lName);	  //outPut: Shan
+console.log(Gender);  //outPut: undefined
+
+
+// Example 3
+let employee = ["Kumar", "Shan", "Male"];
+
+let [, , Gender] = employee; // this is the way we can access necessary value 
+
+// console.log(fName);   //Only i need Gender show i removed var
+// console.log(lName);	  //Only i need Gender show i removed var
+console.log(Gender);  //outPut: Male
+
+
+// Example 4
+let employee = ["Kumar", "Shan", "Male"];
+
+let [fName, ...elements] = employee;
+
+console.log(fName);   //outPut: Kumar
+console.log(elements);	  //outPut: ["Shan", "Male"]
+
+
+// Example 5 [De-structuring with default value] 
+let employee = ["Kumar", "Shan"];
+
+let [fName, lName, Gender="Male"] = employee;
+
+console.log(fName);   //outPut: Kumar
+console.log(lName);	  //outPut: Shan
+console.log(Gender);  //outPut: Male
+
+// Example 5.1 [De-structuring with default value] 
+
+let employee = ["Kumar", "Shan", "Female"];
+
+let [fName, lName, Gender="Male"] = employee;
+
+console.log(fName);   //outPut: Kumar
+console.log(lName);	  //outPut: Shan
+console.log(Gender);  //outPut: Female
+
+//  ###################### De-structuring Array End  ##################

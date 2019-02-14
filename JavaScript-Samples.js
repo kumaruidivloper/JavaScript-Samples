@@ -353,3 +353,123 @@ console.log(e,getID());
 //Output: 10
 
 //  ###################### JavaScript class Inheritance End ##################
+
+
+
+
+
+
+//  ###################### Remove Duplicate Value From Array ##################
+
+let a = [1,1,"1",2,"2",0,0,2,4,4,"4",100,100,"100"];
+let b = [];
+for (let i=0; i<=a.length; i++) {
+	if(b.indexOf(a[i]) === -1) {
+		b.push(a[i]);
+	}
+}
+
+console.log(b);  //outPut: [1, "1", 2, "2", 0, 4, "4", 100, "100", undefined]
+
+//  ###################### Remove Duplicate Value From Array End ##################
+
+
+
+
+//  ###################### Revers String From Array ##################
+
+function reverseString(){
+	var str = "KUMAR"
+	var revString = "";
+	
+	for (let i=str.length-1; i>=0; i--) {
+		revString += str[i];
+		console.log(revString);
+	}
+}
+
+reverseString() //outPut: RAMUK
+
+//  ###################### Revers String From Array End ##################
+
+
+
+//  ###################### Descending Order Array ##################
+
+let a = [343,5,33,007,889,000,880,777,10,40]
+for(let i=0; i<a.length; i++){
+	for(let j=i+1; j<a.length; j++) {
+		if( a[i] < a[j]) {
+			//a[i] = a[i]+a[j]
+			//a[j] = a[i]-a[j]
+			//a[i] = a[i]-a[j]
+			//(Or)
+			temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+		}
+	}
+}
+
+console.log(a); //outPut: [889, 880, 777, 343, 40, 33, 10, 7, 5, 0]
+
+//  ###################### Descending Order Array End ##################
+
+
+
+//  ###################### Ascending Order From Array ##################
+
+let a = [343,5,33,007,889,000,880,777,10,40]
+for(let i=0; i<a.length; i++){
+	for(let j=i+1; j<a.length; j++) {
+		if( a[i] > a[j]) {
+			//a[i] = a[i]+a[j]
+			//a[j] = a[i]-a[j]
+			//a[i] = a[i]-a[j]
+			//(Or)
+			temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+		}
+	}
+}
+
+console.log(a); // outPut: [0, 5, 7, 10, 33, 40, 343, 777, 880, 889]
+
+//  ###################### Ascending Order From Array End ##################
+
+
+
+
+//  ###################### Biggest Number From Array ##################
+
+let a = [343,5,33,007,889,000,880,777,10,40]
+let max = a[0];
+for (let i=0; i<a.length; i++) {
+	   if(a[i] > max) {
+		   max = a[i];
+	   }
+}
+
+console.log(max); //Output: 889
+
+
+//  ###################### Biggest Number From Array End #################
+
+
+
+
+//  ###################### Lowest Number From Array ##################
+
+let a = [343,5,33,007,889,000,880,777,10,40]
+let max = a[0];
+for (let i=0; i<a.length; i++) {
+	   if(a[i] < max) {
+		   max = a[i];
+	   }
+}
+
+console.log(max); //Output: 889
+
+
+//  ###################### Lowest Number From Array End #################

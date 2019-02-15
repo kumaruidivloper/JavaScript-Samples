@@ -473,3 +473,24 @@ console.log(max); //Output: 889
 
 
 //  ###################### Lowest Number From Array End #################
+
+
+
+//  ###################### JavaScript Closure ##################
+
+
+function outer() {
+   var b = 10;
+   function inner() {
+        
+         var a = 20; 
+         console.log(a+b);
+    }
+   return inner;
+}
+
+var x = outer()
+x() //outPut: 30
+
+
+//  ###################### JavaScript Closure End ##################

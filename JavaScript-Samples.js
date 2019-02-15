@@ -494,3 +494,69 @@ x() //outPut: 30
 
 
 //  ###################### JavaScript Closure End ##################
+
+
+
+//  ###################### Copy the Obj in JavaScript ##################
+
+
+
+// ############################# Object.assign  ########################
+
+var x = {myProp: "value"};
+var y = Object.assign({}, x);
+
+x.myProp  //outPut: "value"
+y.myProp  //outPut: "value"
+
+x.myProp = "changed"
+
+x.myProp  //outPut: "changed"
+y.myProp  //outPut: "value"
+
+
+var x = [1,2,3,4];
+var y = Object.assign([], x);
+
+x[0]  //outPut: 1
+y[0]  //outPut: 1
+
+x[0] = 100;
+
+x[0]  //outPut: 100
+y[0]  //outPut: 1
+
+// ############################# Object.assign End  ########################
+
+
+
+// ############################# Spread Operator   ########################
+
+var x = {myProp: "value"};
+var y = {...x}
+
+x.myProp  //outPut: "value"
+y.myProp  //outPut: "value"
+
+x.myProp = "changed"
+
+x.myProp  //outPut: "changed"
+y.myProp  //outPut: "value"
+
+
+var x = [1,2,3,4];
+var y = [...x]
+
+x[0]  //outPut: 1
+y[0]  //outPut: 1
+
+x[0] = 100;
+
+x[0]  //outPut: 100
+y[0]  //outPut: 1
+
+// #############################  Spread Operator End  ########################
+
+
+
+//  ###################### Copy the Obj in JavaScript End ################## 

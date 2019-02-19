@@ -559,4 +559,152 @@ y[0]  //outPut: 1
 
 
 
-//  ###################### Copy the Obj in JavaScript End ################## 
+//  ###################### Copy the Obj in JavaScript End ##################
+
+
+
+//  ###################### JavaScript Higher Order Functions ##################
+//https://youtu.be/rRgD1yVwIvE
+
+const companies = [
+  {name: "Company One", category: "Finance", start: 1981, end: 2003},
+  {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+  {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+  {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+  {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+  {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+  {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+  {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+  {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];﻿ 
+
+
+// normal for loop
+for (let i=0; i<companies.length; i++) { 
+   console.log(companies[i]) 
+}
+
+// forEach 
+companies.forEach(function(company) {
+	console.log(company);
+});
+
+// normal for loop
+let canDrink = [];
+for (let i=0; i<ages.length; i++) {
+	if (ages[i] >= 21) {
+		canDrink.push(ages[i]);
+	}
+}
+console.log(canDrink);
+
+
+// filter
+let canDrink = ages.filter(function(age) {
+	if ( age >= 21 ) {
+		return true;
+	}
+});
+
+console.log(canDrink);
+
+// Arrow Function
+let canDrink = ages.filter(age => age >= 21);
+
+console.log(canDrink);
+
+// filter Company Category
+let retailCompanies = companies.filter(function(company) {
+	if (companies.category === "Retail") {
+		return true;
+	}
+});
+
+console.log(retailCompanies);
+
+
+//  ###################### JavaScript Higher Order Functions End ##################
+
+
+
+//  ###################### Arrow Function vs Normal Function [this scope] ##################
+// https://medium.freecodecamp.org/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881
+
+
+// Normal function
+var bunny = {
+  name: 'Usagi',
+  tasks: ['transform', 'eat cake', 'blow kisses'],
+  showTasks: function() {
+    this.tasks.forEach(function(task) {
+      alert(this.name + " wants to " + task);
+    });
+  }
+};
+
+bunny.showTasks();
+// outPut:
+
+// [object Window] wants to transform
+// [object Window] wants to eat cake
+// [object Window] wants to blow kisses
+
+
+
+// Normal function Access this scope
+
+var bunny = {
+  name: 'Usagi',
+  tasks: ['transform', 'eat cake', 'blow kisses'],
+  showTasks: function() {
+    var _this = this;
+    this.tasks.forEach(function(task) {
+      alert(_this.name + " wants to " + task); 
+    });
+  }
+};
+
+bunny.showTasks();
+// Usagi wants to transform
+// Usagi wants to eat cake
+// Usagi wants to blow kisses
+
+
+// Normal function Access this scope use BIND
+var bunny = {
+  name: 'Usagi',
+  tasks: ['transform', 'eat cake', 'blow kisses'],
+  showTasks: function() {
+    this.tasks.forEach(function(task) {
+      alert(this.name + " wants to " + task);
+    }.bind(this));
+  }
+};
+
+bunny.showTasks();
+// Usagi wants to transform
+// Usagi wants to eat cake
+// Usagi wants to blow kisses
+
+
+
+// Arrow function Access this scope
+var bunny = {
+  name: 'Usagi',
+  tasks: ['transform', 'eat cake', 'blow kisses'],
+  showTasks() {
+    this.tasks.forEach((task) => {
+      alert(this.name + " wants to " + task);
+    });  
+  }
+};
+
+bunny.showTasks();
+// Usagi wants to transform
+// Usagi wants to eat cake
+// Usagi wants to blow kisses
+
+
+//  ###################### Arrow Function vs Normal Function [this scope] End ##################

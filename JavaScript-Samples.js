@@ -708,3 +708,76 @@ bunny.showTasks();
 
 
 //  ###################### Arrow Function vs Normal Function [this scope] End ##################
+
+
+
+
+//  ###################### Sum of Array ##################
+// https://youtu.be/g1C40tDP0Bk
+
+// Normal logic
+var number = [1,-1,2,3];
+var sum = 0;
+for(var i=0; i<number.length; i++) {
+	sum += number[i];
+}
+
+console.log(sum);
+
+// Normal for of logic
+var number = [1,-1,2,3];
+var sum = 0;
+for(let n of number) {
+	sum += n;
+}
+
+console.log(sum);
+
+
+// reduce logic
+var number = [1,-1,2,3];
+var sum = 0;
+number.reduce((accumulator, currrentValue) => {
+	return accumulator + currrentValue
+}, 0);
+
+//  ###################### Sum of Array End ##################
+
+
+
+//  ###################### JavaScript Factory Function ##################
+// https://www.youtube.com/watch?v=jpegXpQpb3o
+
+function createCircle(radius) {
+	return {
+	radius,
+	draw() {
+		console.log("draw");
+	}
+	}
+}
+
+let circle1 = createCircle(1);
+console.log(circle1);   //outPut: {radius:1, draw:f}
+let circle2 = createCircle(2);
+console.log(circle2);   //outPut: {radius:2, draw:f}
+
+//  ###################### JavaScript Factory Function End ##################
+
+
+
+
+//  ###################### JavaScript Constructor Function ##################
+// https://www.youtube.com/watch?v=23AOrSN-wmI
+
+function Circle(radius) {
+	this.radius = radius;
+	this.draw = function() {
+		console.log("draw");
+	}
+}
+
+const circle = new Circle(1);
+console.log(circle);  //outPut: {radius: 1, draw: ƒ}
+
+//  ###################### JavaScript Constructor Function End ##################

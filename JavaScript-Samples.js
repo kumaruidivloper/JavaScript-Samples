@@ -749,7 +749,7 @@ number.reduce((accumulator, currrentValue) => {
 // https://www.youtube.com/watch?v=jpegXpQpb3o
 
 function createCircle(radius) {
-	return {
+	return {  // return the object
 	radius,
 	draw() {
 		console.log("draw");

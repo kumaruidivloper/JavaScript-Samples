@@ -1,3 +1,26 @@
+// ########################################################## Angular CLI Important Comments ##########################################################
+ng g c nameOfthecomponent
+npm start build
+ng new ng5 --style=scss --routing
+npm install @angular/animations@latest --save
+
+npm install -g typescript@2.4.2
+tsc --version
+
+npm uninstall -g @angular/cli
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g @angular/cli@1.5.3
+npm install -g @angular/cli
+npm install -g yarn
+
+npm install --save @angular/material @angular/cdk
+npm install --save @angular/animations
+
+
+// ########################################################## Angular CLI Important Comments End ##########################################################
+
+
 //  ########################################################## 1)Promises #############################################################
 // https://www.youtube.com/watch?v=swdWUWtGxR4
 
